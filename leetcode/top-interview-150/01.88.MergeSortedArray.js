@@ -1,4 +1,8 @@
 /**
+ * ================Link
+ * https://leetcode.com/problems/merge-sorted-array/description/?envType=study-plan-v2&envId=top-interview-150
+ * 
+ * ================Explanation
  * 
  * You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
 
@@ -61,17 +65,20 @@ var merge = function (nums1, m, nums2, n) {
   return mergedArray;
 };
 
-const nums1 = [1, 2, 3, 0, 0, 0],
-  m = 3,
-  nums2 = [2, 5, 6],
-  n = 3;
-// const nums1 = [1],
-//   m = 1,
-//   nums2 = [],
-//   n = 0;
-// const nums1 = [0],
-//   m = 0,
-//   nums2 = [1],
-//   n = 1;
+const test1Nums1 = [1, 2, 3, 0, 0, 0],
+  m1 = 3,
+  test1Num2 = [2, 5, 6],
+  n1 = 3;
+console.log(merge(nums1, m, nums2, n));
 
+const test2Nums1 = [1],
+  m2 = 1,
+  test2Nums2 = [],
+  n = 0;
+console.log(merge(nums1, m, nums2, n));
+
+const test3Nums1 = [0],
+  m3 = 0,
+  test3Nums2 = [1],
+  n3 = 1;
 console.log(merge(nums1, m, nums2, n));
