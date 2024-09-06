@@ -8,7 +8,7 @@ const privateCounter = (() => {
   };
 })();
 
-// This IIFE and called itself
+// This Immediately Invoked Function Expression(IIFE) and called itself
 // the result will be log is
 // Initial value of count: 0
 // if I call the function
