@@ -1,9 +1,9 @@
 namespace withoutOC {
   export class Shape {
     public type: string | undefined;
+    public radius: number | null;
     public length: number | null;
     public breath: number | null;
-    public radius: number | null;
     constructor(
       type: string = "",
       radius: number | null = null,
