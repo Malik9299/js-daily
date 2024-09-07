@@ -1,4 +1,4 @@
-namespace ViskoveSubstitution {
+namespace LiskovSubstitutionPrinciple {
   interface Shape {
     area(): number;
   }
