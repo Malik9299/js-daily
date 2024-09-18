@@ -49,9 +49,29 @@ var IS;
         return Student;
     }());
     IS.Student = Student;
+    var Admin = /** @class */ (function () {
+        function Admin() {
+        }
+        Admin.prototype.manage = function () {
+            console.log("Practice: A class can implement multiple interfaces (multiple inheritance) ");
+            console.log("Admin is watching");
+        };
+        Admin.prototype.teaching = function () {
+            console.log("Teacher is teaching");
+        };
+        Admin.prototype.studying = function () {
+            console.log("Student is studying");
+        };
+        return Admin;
+    }());
+    IS.Admin = Admin;
 })(IS || (IS = {}));
 console.log("=============================");
 var teacher1 = new IS.Teacher();
 teacher1.teaching();
 var student1 = new IS.Student();
 student1.studying();
+var admin1 = new IS.Admin();
+admin1.manage();
+admin1.teaching();
+admin1.studying();

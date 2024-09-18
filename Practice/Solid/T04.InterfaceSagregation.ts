@@ -44,6 +44,20 @@ namespace IS {
       console.log("Student is studying");
     }
   }
+  export class Admin implements Study, Teach {
+    manage(): void {
+      console.log(
+        "Practice: A class can implement multiple interfaces (multiple inheritance) "
+      );
+      console.log("Admin is watching");
+    }
+    teaching(): void {
+      console.log("Teacher is teaching");
+    }
+    studying(): void {
+      console.log("Student is studying");
+    }
+  }
 }
 
 console.log("=============================");
@@ -53,3 +67,8 @@ teacher1.teaching();
 
 const student1 = new IS.Student();
 student1.studying();
+
+const admin1 = new IS.Admin();
+admin1.manage();
+admin1.teaching();
+admin1.studying();
