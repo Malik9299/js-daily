@@ -84,3 +84,50 @@ console.log(scoreObject); //  first: 44, second: 12, third: { a: 8, b: 2 } }
 // So how we avoid these mutations
 
 // instead of shallow copy deep copy is needed to avoid this
+
+console.log(
+  "-------------------------------------------------------------------------------------------"
+);
+
+console.log({} == {});
+
+const deepEqual = (obj1, obj2) => {
+  if (obj1 === obj2) {
+    console.log("Here 1");
+    return true; // Same reference or both are null/undefined
+  }
+
+  console.log("typeof obj1 ===> ", typeof obj1);
+  console.log("obj1 ===> ", obj1);
+
+  if (
+    typeof obj1 !== "object" ||
+    typeof obj2 !== "object" ||
+    obj1 === null ||
+    obj2 === null
+  ) {
+    console.log("Here 2");
+    return false; // Different types or one is null
+  }
+
+  const keys1 = Object.keys(obj1);
+  const keys2 = Object.keys(obj2);
+
+  if (keys1.length !== keys2.length) return false; // Different number of keys
+
+  console.log("keys2 ===> ", keys2);
+
+  for (let key of keys1) {
+    console.log("key ===> ", key);
+    if (!keys2.includes(key) || !deepEqual(obj1[key], obj2[key])) {
+      console.log("Here Others");
+      return false; // Key not in obj2 or values are not equal
+    }
+  }
+
+  console.log("Here 3");
+
+  return true; // Objects are deeply equal
+};
+
+console.log(deepEqual({}, {})); // Logs: true
